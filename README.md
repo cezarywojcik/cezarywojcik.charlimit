@@ -4,7 +4,7 @@ Draws a line at a specified column number.
 
 To access settings, go to Edit->CharLimit Preferences.
 
-The default settings are 80 characters, #bbbbbb for the line color, and the line is enabled.
+The default settings are 80 characters, #bbbbbb for the line color, and enabled.
 
 ## Known Issues
 
