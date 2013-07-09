@@ -1,11 +1,10 @@
 /*jslint indent: 2,maxerr: 50 */
-/*global define, brackets, AppInit */
+/*global define, brackets */
 
 define(function (require, exports, module) {
   "use strict";
 
-  var DocumentManager = brackets.getModule("document/DocumentManager"),
-      EditorManager   = brackets.getModule("editor/EditorManager");
+  var DocumentManager = brackets.getModule("document/DocumentManager");
 
   function charWidth() {
     var o = $('<div>a</div>')
@@ -18,7 +17,7 @@ define(function (require, exports, module) {
     o.remove();
     return w;
   }
-  
+
   function getGutterWidth() {
     var result = 15;
     var max = 0;
@@ -49,5 +48,3 @@ define(function (require, exports, module) {
 
   $(DocumentManager).on('currentDocumentChange', drawCharLimit);
 });
-
-///////////////////////////////////////////////////////////////////////////////
