@@ -34,7 +34,7 @@ define(function (require, exports, module) {
 
   function setPreference(name, value) {
     var storage = getStorage();
-    if (typeof name == 'object') {
+    if (typeof name === 'object') {
       for (var p in name) {
         if (name.hasOwnProperty(p)) {
           storage[p] = name[p];
@@ -72,7 +72,7 @@ define(function (require, exports, module) {
 
   function drawCharLimit() {
     $('#charlimit').remove();
-    if (getPreference('charLimitEnabled')) {
+    if (getPreference('charLimitEnabled') && !!DocumentManager.getCurrentDocument()) {
       var cols = getPreference('charLimitCols');
       cols--;
       var width = cols*charWidth() + getGutterWidth();
